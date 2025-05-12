@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url(fontsomori/OMORI_GAME2.ttf);
+    font-family: OMORI_GAME2;
+}
+
+body {
+    background-image: url(imagesomori/pink12.gif);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 990px;
+    margin-top: 100px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffcfef;
+    padding: 1.3rem 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+.logopics {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logopics p{
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-family: OMORI_GAME2;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 1.5vw, 3rem);
+    display: inline;
+}
+
+#texthead1 a{
+    text-decoration: none;
+}
+
+#texthead {
+    display: none;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgb(255, 255, 255), transparent);
+    transition: .2s;
+}
+
+.header:hover:after {
+    left: 100%;
+}
+
+.logo img {
+    width: 45px;
+}
+
+.navbar a {
+    font-size: clamp(1.5rem, 1.5vw, 3rem);
+    color: #fff;
+    text-decoration: none;
+    font-family: OMORI_GAME2;
+    font-weight: 1000;
+    margin-left: 2.5rem;
+}
+
+.navbar a:hover {
+    color: #ffcfef;
+    transition: .3s ease;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    font-size: 2.7rem;
+    color: #fff;
+    cursor: pointer;
+    right: 1%;
+    display: none;
+    position: absolute;
+}
+
+/*responsive*/
+@media (max-width: 815px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #FFCFEF;
+        border: 2px dashed #fff;
+        transition: .4s ease;
+        overflow: hidden;
+    }
+
+    #check:checked~.navbar {
+        height: 14rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: clamp(1.5rem, 1.5vw, 3rem);
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 390px) {
+    .logopics p {
+        display: none;
+    }
+
+    #texthead {
+        display: inline;
+    }
+}
+
+/*main content*/
+
+.bordercute {
+    position: relative;
+}
+
+.bordercute img {
+    width: 350px;
+    padding: 10px 0px;
+    position: relative;
+    border-radius: 30px;
+}
+
+.text p{
+    width: 200px;
+    position: absolute;
+    left: 80px;
+    top: 95px;
+    font-family: OMORI_GAME2;
+    font-size: clamp(1.3rem, 1.1vw, 2.5rem);
+    text-align: justify;
+    font-weight: 600;
+}
+
+.text1 p{
+    width: 330px;
+    position: absolute;
+    left: 10px;
+    top: 95px;
+    font-family: OMORI_GAME2;
+    font-size: clamp(1.3rem, 1.12vw, 2.5rem);
+    text-align: justify;
+    font-weight: 600;
+}
+
+.text2 p{
+    width: 200px;
+    position: absolute;
+    left: 80px;
+    top: 95px;
+    font-family: OMORI_GAME2;
+    font-size: clamp(1.3rem, 1.1vw, 2.5rem);
+    font-weight: 600;
+}
+
+.text3 p{
+    width: 290px;
+    position: absolute;
+    left: 30px;
+    top: 75px;
+    font-family: OMORI_GAME2;
+    font-size: clamp(1.3rem, 1.12vw, 2.5rem);
+    text-align: justify;
+    font-weight: 600;
+}
+
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#cotext1 {
+    color: #fb6f92;
+}
+
+#cotext2 {
+    color: #589ac4;
+}
+
+#cotext3 {
+    color: #6d13a8;
+}
+
+#cotext4 {
+    color: #588157;
+}
+
+.heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart img {
+    width: 250px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFDBDB;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F49BAB;
+  border-radius: 10px;
+  border: 1px solid #fff; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF90BB;
+}
+
+
